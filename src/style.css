@@ -1,0 +1,46 @@
+.heading {
+  position: absolute;
+  left: 430px;
+}
+
+.individ {
+  position: absolute;
+  left: 360px;
+  top: 120px;
+  width: 600px;
+  height: 40px
+}
+
+.send {
+  cursor: pointer;
+  position: absolute;
+  left: 600px;
+  top: 300px;
+
+}
+
+.text {
+  position: absolute;
+  left: 360px;
+  top: 190px;
+  width: 600px;
+  height: 100px
+}
+
+.list {
+  position: absolute;
+  left: 320px;
+  top: 330px
+}
+
+.delete {
+  position: absolute;
+  cursor: pointer;
+  left: 580px
+}
+
+.li {
+  width: 480px;
+  background: #eee;
+  margin-bottom: 1em
+}
