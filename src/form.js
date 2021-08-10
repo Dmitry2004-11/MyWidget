@@ -2,11 +2,13 @@ import React from 'react';
 
 const Form = (props) => {
   return (
-  <div onChange={props.turn} >
-    <input class="individ" placeholder="Введите ваше имя" value={props.todos.individ}></input>
-    <input class="text" placeholder="Введите ваш комментарий..." value={props.todos.text}></input>
-    <button class="send" onClick={props.storageTurn}>Отправить</button>
-  </div>
+  <form onChange={props.turn} onSubmit={ e => {e.preventDefault();
+   props.storageTurn()
+   }} >
+    <input class="individ" placeholder="Введите ваше имя" value={props.todos.individ} required></input>
+    <input class="text" placeholder="Введите ваш комментарий..." value={props.todos.text} required></input>
+    <input class="send" type="submit" value="Отправить"></input>
+  </form>
   )
 }
 

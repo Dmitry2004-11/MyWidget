@@ -4,9 +4,7 @@ import css from './style.css';
 
 import Form from './form.js';
 import List from './list.js';
-import TimeDate from './time.js';
-
-let t = new TimeDate();
+import timeDate from './time.js';
 
 class MyWidget extends React.Component {
   constructor() {
@@ -14,21 +12,9 @@ class MyWidget extends React.Component {
 
     this.state = {
       todos: { individ: '', text: '', active: false },
-      storage: localStorage,
-      time: t.result()
+      storage: localStorage
     };
   }
-
-  componentDidMount() {
-    this.timerID = setInterval(
-      () => this.tick(),
-      1000
-    );
-  }
-
-  componentWillUnmount() { clearInterval(this.timerID) }
-
-  tick() { this.setState({ time: t.result() }) }
 
   turn(e) {
     let todos = this.state.todos;
@@ -41,10 +27,10 @@ class MyWidget extends React.Component {
 
   storageTurn() {
     if (!this.state.todos.active){
-      alert("Вы не заполнили все поля или заполнили некорректно!\nТекст обоих полей не должен начинаться с пробела,\nа поле имени должно содержать хотя бы одну букву.")
+      alert("Текст обоих полей не должен начинаться с пробела,\nа поле имени должно содержать хотя бы одну букву.")
     }
     else {
-      const str = { individ: this.state.todos.individ, text: this.state.todos.text, time: this.state.time }
+      const str = { individ: this.state.todos.individ, text: this.state.todos.text, time: timeDate() }
       localStorage.setItem(localStorage.length.toString(10), JSON.stringify(str));
       this.setState({ storage: localStorage });
       let todos = this.state.todos;
