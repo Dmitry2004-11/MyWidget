@@ -3,12 +3,20 @@
   left: 430px;
 }
 
-.individ {
+#individ {
   position: absolute;
   left: 360px;
   top: 120px;
   width: 600px;
   height: 40px
+}
+
+#text {
+  position: absolute;
+  left: 360px;
+  top: 190px;
+  width: 600px;
+  height: 100px
 }
 
 .send {
@@ -17,14 +25,6 @@
   left: 600px;
   top: 300px;
 
-}
-
-.text {
-  position: absolute;
-  left: 360px;
-  top: 190px;
-  width: 600px;
-  height: 100px
 }
 
 .list {

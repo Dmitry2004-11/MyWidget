@@ -5,8 +5,8 @@ const Form = (props) => {
   <form onChange={props.turn} onSubmit={ e => {e.preventDefault();
    props.storageTurn()
    }} >
-    <input class="individ" placeholder="Введите ваше имя" value={props.todos.individ} required></input>
-    <input class="text" placeholder="Введите ваш комментарий..." value={props.todos.text} required></input>
+    <input id="individ" placeholder="Введите ваше имя" value={props.todos.individ} required></input>
+    <textarea id="text" placeholder="Введите ваш комментарий..." value={props.todos.text} required></textarea>
     <input class="send" type="submit" value="Отправить"></input>
   </form>
   )

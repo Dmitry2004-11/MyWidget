@@ -19,7 +19,7 @@ class MyWidget extends React.Component {
   turn(e) {
     let todos = this.state.todos;
     let txt = e.target.value;
-    let check = e.target.className;
+    let check = e.target.id;
     (check == "text") ? todos.text = txt : todos.individ = txt;
     todos.active = ((todos.individ.length) && (todos.text.length)) && ((todos.individ[0] != ' ' ) && (todos.text[0] != ' ')) && (/\p{L}/gu.test(todos.individ)) ? true : false;
     this.setState({ todos });
